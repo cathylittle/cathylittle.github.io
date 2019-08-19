@@ -67,7 +67,10 @@
 <meta property="og:image" content="http://yoursite.com/img/formula1.png">
 <meta property="og:image" content="http://yoursite.com/img/formula2.png">
 <meta property="og:image" content="http://yoursite.com/img/confusion.png">
-<meta property="og:updated_time" content="2019-08-19T09:48:30.000Z">
+<meta property="og:image" content="http://yoursite.com/img/formula3.png">
+<meta property="og:image" content="http://yoursite.com/img/formula5.png">
+<meta property="og:image" content="http://yoursite.com/img/formula6.png">
+<meta property="og:updated_time" content="2019-08-19T10:08:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="推荐系统测评">
 <meta name="twitter:description" content="一个好的推荐系统，是让三方共赢的系统，包括：用户、网站、内容提供商。好的推荐系统设计能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐质量，增加用户和网站的交互，提高网站的收入。">
@@ -263,7 +266,7 @@
                 
               
 
-              <time title="Created: 2019-08-19 15:03:07 / Modified: 17:48:30" itemprop="dateCreated datePublished" datetime="2019-08-19T15:03:07+08:00">2019-08-19</time>
+              <time title="Created: 2019-08-19 15:03:07 / Modified: 18:08:06" itemprop="dateCreated datePublished" datetime="2019-08-19T15:03:07+08:00">2019-08-19</time>
             </span>
           
             
@@ -347,7 +350,6 @@
 <h5 id="3、在线实验"><a href="#3、在线实验" class="headerlink" title="3、在线实验"></a>3、在线实验</h5><p>常用方法A/B Testing。它通过一定的规则将用户随机分成几组，并对不同组的用户采用不同的算法，然后通过统计不同组用户的各种不同的评测指标，比较不同算法，比如可以统计不同组用户的点击率，通过点击率比较不同算法的性能。</p>
 <img width="500" src="/img/ABtesting.png"> 
 
-
 <table>
 <thead>
 <tr>
@@ -397,12 +399,13 @@
 <p>就预测评分与TopN的讨论<br>亚马逊前科学家GregLinden有不同的看法。2009年,他在CommunicationsoftheACM网站发表了一篇文章，指出电影推荐的目的是找到用户最有可能感兴趣的电影，而不是预测用户看了电影后会给电影什么样的评分。因此，TopN推荐更符合实际的应用需求。也许有一部电影用户看了之后会给很高的分数，但用户看的可能性非常小。因此，预测用户是否会看一部电影，应该比预测用户看了电影后会给它什么评分更加重要。</p>
 </blockquote>
 <h5 id="3、覆盖率"><a href="#3、覆盖率" class="headerlink" title="3、覆盖率"></a>3、覆盖率</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：内容提供商<br>覆盖率描述一个推荐系统对长尾物品的发掘能力。最简单的定义为：推荐出来的物品占所有物品的比例。更细致的方法是统计推荐列表中不同物品出现次数的分布。信息学和经济学中有两个指标来定义覆盖率：信息熵和基尼系数。</p>
-<p>&lt;img width=300 src=”/img/formula3.png” &gt;</p>
+<img width="300" src="/img/formula3.png">
+
 <blockquote>
 <p><strong>马太效应（强者越强，弱者越弱）</strong><br>Page Ranking就是具有马太效应的案例，很多研究表明现在流行的推荐算法（比如协同过滤算法）也是具备马太效应，但推荐算法诞生之初的目的，就是为了消除马太效应。<br>评测算法是否具备马太效应，就是用基尼系数。G1是用户初始行为基于物品流行度的基尼系数，G2位推荐算法基于物品流行度的基尼系数，如果G2&gt;G1，我们说算法具备马太效应。</p>
 </blockquote>
 <h5 id="4、多样性"><a href="#4、多样性" class="headerlink" title="4、多样性"></a>4、多样性</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：用户、网站、内容提供商<br>多样性描述物品亮亮之间的不相似性。多样性和相似性是对应的。</p>
-<p>假设&lt;img width=300 src=”/img/formula4.png” &gt;定义了物品i和j之间的相似度，那么用户u的推荐列表R(u)的多样性定义如下：<br>&lt;img width=300 src=”/img/formula5.png” &gt;<br>而推荐系统的整体多样性可以定义为所有用户推荐列表多样性的平均值：<br>&lt;img width=300 src=”/img/formula6.png” &gt;<br>那么多样性达到什么程度呢？又可以考虑到多样性，又可以考虑到主要兴趣，比如某个用户80%时间看动画，20%看动作片，那么我们推荐动画数量：动作数量=4：1比较合理。</p>
+<p>假设  s(i,j)属于[0,1]  定义了物品i和j之间的相似度，那么用户u的推荐列表R(u)的多样性定义如下：<br><img width="300" src="/img/formula5.png"><br>而推荐系统的整体多样性可以定义为所有用户推荐列表多样性的平均值：<br><img width="300" src="/img/formula6.png"><br>那么多样性达到什么程度呢？又可以考虑到多样性，又可以考虑到主要兴趣，比如某个用户80%时间看动画，20%看动作片，那么我们推荐动画数量：动作数量=4：1比较合理。</p>
 <h5 id="5、新颖性"><a href="#5、新颖性" class="headerlink" title="5、新颖性"></a>5、新颖性</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：用户、内容提供商</p>
 <p>新颖性是指给用户推荐那些从未听说过的物品。<br>最简单的实现办法：把用户之前在网站上有过行为的物品从推荐列表中过滤掉。面临的问题：有可能这些物品用户在别的渠道看过或者购买过。<br>最简单的评测办法：利用推荐结果的平均流行度，因为越不热门的物品越有可能让用户觉得新颖。面临的问题：比较粗略，因为不同用户不知道的东西是不同的。<br>需要思考的是：在提升新颖度和多样性的是否，是否会对精度有影响，如何平衡这些影响？</p>
 <h5 id="6、惊喜度"><a href="#6、惊喜度" class="headerlink" title="6、惊喜度"></a>6、惊喜度</h5><p>适用方法：用户调查<br>关注者：用户、内容提供商</p>
