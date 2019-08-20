@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.json',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="一个好的推荐系统，是让三方共赢的系统，包括：用户、网站、内容提供商。好的推荐系统设计能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐质量，增加用户和网站的交互，提高网站的收入。">
+<meta name="keywords" content="推荐系统,测评">
+<meta property="og:type" content="article">
+<meta property="og:title" content="推荐系统测评">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/推荐系统测评/index.html">
+<meta property="og:site_name" content="Cathy&#39;s blog">
+<meta property="og:description" content="一个好的推荐系统，是让三方共赢的系统，包括：用户、网站、内容提供商。好的推荐系统设计能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐质量，增加用户和网站的交互，提高网站的收入。">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="http://yoursite.com/img/ABtesting.png">
+<meta property="og:image" content="http://yoursite.com/img/user_satisified.png">
+<meta property="og:image" content="http://yoursite.com/img/formula1.png">
+<meta property="og:image" content="http://yoursite.com/img/formula2.png">
+<meta property="og:image" content="http://yoursite.com/img/confusion.png">
+<meta property="og:image" content="http://yoursite.com/img/formula3.png">
+<meta property="og:image" content="http://yoursite.com/img/formula5.png">
+<meta property="og:image" content="http://yoursite.com/img/formula6.png">
+<meta property="og:updated_time" content="2019-08-20T09:40:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="推荐系统测评">
+<meta name="twitter:description" content="一个好的推荐系统，是让三方共赢的系统，包括：用户、网站、内容提供商。好的推荐系统设计能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐质量，增加用户和网站的交互，提高网站的收入。">
+<meta name="twitter:image" content="http://yoursite.com/img/ABtesting.png">
+  <link rel="canonical" href="http://yoursite.com/2019/06/19/推荐系统测评/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>推荐系统测评 | Cathy's blog</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cathy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-favorite">
+      
+    
+
+    <a href="/favorite/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>favorite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/19/推荐系统测评/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cathy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cathy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">推荐系统测评
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-06-19 20:03:07" itemprop="dateCreated datePublished" datetime="2019-06-19T20:03:07+08:00">2019-06-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-20 17:40:56" itemprop="dateModified" datetime="2019-08-20T17:40:56+08:00">2019-08-20</time>
+              </span>
+            
+          
+
+          
+            <span id="/2019/06/19/推荐系统测评/" class="post-meta-item leancloud_visitors" data-flag-title="推荐系统测评" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/06/19/推荐系统测评/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/06/19/推荐系统测评/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>3.9k</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一个好的推荐系统，是让三方共赢的系统，包括：用户、网站、内容提供商。好的推荐系统设计能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐质量，增加用户和网站的交互，提高网站的收入。</p>
+<a id="more"></a>
+
+<p>预测准确度是推荐系统领域的重要指标。比如推荐某个商品，用户真的买的。但这并不代表这个准确度是真正有意义的，加入用户本身就是要买这个商品的，如果推荐都不会有额外的价值，并未给网站&amp;内容提供商带来新的收益。因此，好的推荐系统不仅仅能够准确预测用户行为，还能拓宽用户视野，帮助用户发现可能感兴趣却没那么容易找到的东西，同时还能把长尾好的内容提供给感兴趣的观众。</p>
+<h4 id="第一节：评测方法简介"><a href="#第一节：评测方法简介" class="headerlink" title="第一节：评测方法简介"></a>第一节：评测方法简介</h4><p>评测办法有三种：<br>&emsp;&emsp; - &emsp;离线实验；<br>&emsp;&emsp; - &emsp;用户调查；<br>&emsp;&emsp; - &emsp;在线实验。</p>
+<p>新的算法如何能通过A/B Testing呢？<br>&emsp;&emsp;- &emsp;离线实验证明多个指标优于现有算法；<br>&emsp;&emsp;- &emsp;用户调研满意度不低于现有算法；<br>&emsp;&emsp;- &emsp;A/B Testing确定我们关心的指标优于现有算法。</p>
+<h5 id="1、离线实验"><a href="#1、离线实验" class="headerlink" title="1、离线实验"></a>1、离线实验</h5><p>将数据分为训练集和测试集，用测试集的结果</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不需要有对实际系统的控制权</td>
+<td>无法计算商业上关心的指标</td>
+</tr>
+<tr>
+<td>不需要用户参与实验</td>
+<td>离线实验的指标和商业指标存在差距</td>
+</tr>
+<tr>
+<td>速度快，可以测试大量数据</td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="2、用户调查"><a href="#2、用户调查" class="headerlink" title="2、用户调查"></a>2、用户调查</h5><p>让真实的用户，在测试环境的推荐系统上，完成一些任务，记录并观察他们的行为，回答一些问题，通过分析来了解效果。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>优点缺点获得用户直观感受的指标</td>
+<td>用户调研成本高（时间&amp;金钱&amp;人群与平台分布一致）</td>
+</tr>
+<tr>
+<td>风险低，有问题后可以直接修正</td>
+<td>难以进行大规模调研，得出的结论可能不具备统计意义</td>
+</tr>
+<tr>
+<td>测试环境和生产上的用户行为不一致</td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="3、在线实验"><a href="#3、在线实验" class="headerlink" title="3、在线实验"></a>3、在线实验</h5><p>常用方法A/B Testing。它通过一定的规则将用户随机分成几组，并对不同组的用户采用不同的算法，然后通过统计不同组用户的各种不同的评测指标，比较不同算法，比如可以统计不同组用户的点击率，通过点击率比较不同算法的性能。</p>
+<img width="500" src="/img/ABtesting.png"> 
+
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大型网站下，不同功能的A/B Testing可能会打架</td>
+<td>切分流量，不同层以及控制这些层的团队需要从一个统一的地方获得自己AB测试的流量，不同层的流量应该是正交</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不需要用户参与实验</td>
+<td>合理的切分流量，明确因果关系（尤其是待AB的功能较多时）</td>
+</tr>
+<tr>
+<td>有大量的数据验证假设</td>
+<td>技术成本高</td>
+</tr>
+<tr>
+<td>可以评测技术以及商业上的指标</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>关于A/B Testing，我们之后会有专门的文章来讨论，这里就简单的介绍下。</p>
+<br>
+
+<h4 id="第二节：评测指标"><a href="#第二节：评测指标" class="headerlink" title="第二节：评测指标"></a>第二节：评测指标</h4><h5 id="1、用户满意度"><a href="#1、用户满意度" class="headerlink" title="1、用户满意度"></a>1、用户满意度</h5><p>适用方法：用户调研、在线实验<br>关注者：用户、网站<br>在用户调研中，用户满意度主要通过调查问卷得来，需要注意的是调查问卷不是简单询问用户对结果是否满意，而是从不同侧面询问用户的不同感受，比如下面的案例。</p>
+<img width="500" src="/img/user_satisified.png"> 
+
+<p>在在线实验中，用户满意度通过统计用户行为来获取。常用的指标是：点击率、停留时间、转化率等指标，部分网站也会统计反馈按钮的点击，电商网站还可以使用购买率等。</p>
+<h5 id="2、预测准确度"><a href="#2、预测准确度" class="headerlink" title="2、预测准确度"></a>2、预测准确度</h5><p>适用方法：离线实验、问卷调查<br>关注者：用户、网站</p>
+<p><strong>算法目的：预测评分（预测对物品评分的行为）</strong><br>评分预测的准确率一般通过均方根误差（RMSE）和平均绝对误差（MAE）来计算。其中，RMSE加大了对预测不准的惩罚。<br><img width="200" src="/img/formula1.png"><br><img width="300" src="/img/formula2.png"> </p>
+<p><strong>算法目的：Top N推荐</strong><br>指标：准确率和召回率</p>
+<blockquote>
+<p>简单给大家介绍一下准确和召回的含义<br>下图中的0，1分别代表否、是，Actual是实际情况中的数据，Predict是机器预测的数据<br>准确率=在所有的数据中，机器预测正确的占比，换句话说，对所有数据来说，机器对了多少？<br>召回率=在所有准确的数据中，机器预测正确的占比，换句话说，对应该对的数据来说，机器找到了多少个对的？<br><img width="300" src="/img/confusion.png"> </p>
+</blockquote>
+<blockquote>
+<p>就预测评分与TopN的讨论<br>亚马逊前科学家GregLinden有不同的看法。2009年,他在CommunicationsoftheACM网站发表了一篇文章，指出电影推荐的目的是找到用户最有可能感兴趣的电影，而不是预测用户看了电影后会给电影什么样的评分。因此，TopN推荐更符合实际的应用需求。也许有一部电影用户看了之后会给很高的分数，但用户看的可能性非常小。因此，预测用户是否会看一部电影，应该比预测用户看了电影后会给它什么评分更加重要。</p>
+</blockquote>
+<h5 id="3、覆盖率"><a href="#3、覆盖率" class="headerlink" title="3、覆盖率"></a>3、覆盖率</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：内容提供商<br>覆盖率描述一个推荐系统对长尾物品的发掘能力。最简单的定义为：推荐出来的物品占所有物品的比例。更细致的方法是统计推荐列表中不同物品出现次数的分布。信息学和经济学中有两个指标来定义覆盖率：信息熵和基尼系数。</p>
+<img width="300" src="/img/formula3.png">
+
+<blockquote>
+<p><strong>马太效应（强者越强，弱者越弱）</strong><br>Page Ranking就是具有马太效应的案例，很多研究表明现在流行的推荐算法（比如协同过滤算法）也是具备马太效应，但推荐算法诞生之初的目的，就是为了消除马太效应。<br>评测算法是否具备马太效应，就是用基尼系数。G1是用户初始行为基于物品流行度的基尼系数，G2位推荐算法基于物品流行度的基尼系数，如果G2&gt;G1，我们说算法具备马太效应。</p>
+</blockquote>
+<h5 id="4、多样性"><a href="#4、多样性" class="headerlink" title="4、多样性"></a>4、多样性</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：用户、网站、内容提供商<br>多样性描述物品亮亮之间的不相似性。多样性和相似性是对应的。</p>
+<p>假设  s(i,j)属于[0,1]  定义了物品i和j之间的相似度，那么用户u的推荐列表R(u)的多样性定义如下：<br><img width="300" src="/img/formula5.png"><br>而推荐系统的整体多样性可以定义为所有用户推荐列表多样性的平均值：<br><img width="300" src="/img/formula6.png"><br>那么多样性达到什么程度呢？又可以考虑到多样性，又可以考虑到主要兴趣，比如某个用户80%时间看动画，20%看动作片，那么我们推荐动画数量：动作数量=4：1比较合理。</p>
+<h5 id="5、新颖性"><a href="#5、新颖性" class="headerlink" title="5、新颖性"></a>5、新颖性</h5><p>适用方法：离线实验、用户调查、在线实验<br>关注者：用户、内容提供商</p>
+<p>新颖性是指给用户推荐那些从未听说过的物品。<br>最简单的实现办法：把用户之前在网站上有过行为的物品从推荐列表中过滤掉。面临的问题：有可能这些物品用户在别的渠道看过或者购买过。<br>最简单的评测办法：利用推荐结果的平均流行度，因为越不热门的物品越有可能让用户觉得新颖。面临的问题：比较粗略，因为不同用户不知道的东西是不同的。<br>需要思考的是：在提升新颖度和多样性的是否，是否会对精度有影响，如何平衡这些影响？</p>
+<h5 id="6、惊喜度"><a href="#6、惊喜度" class="headerlink" title="6、惊喜度"></a>6、惊喜度</h5><p>适用方法：用户调查<br>关注者：用户、内容提供商</p>
+<p>惊喜度和新颖度的区别：<br>&emsp;&emsp;- &emsp;新颖度取决于用户是否听说过这个推荐结果。<br>&emsp;&emsp;- &emsp;惊喜度是推荐结果与用户历史结果不相似，但却让用户满意。<br>如何评测呢？<br>&emsp;&emsp;- &emsp;推荐结果与历史行为物品的相似性<br>&emsp;&emsp;- &emsp;用户对结果的满意度（详见-用户满意度）</p>
+<h5 id="7、信任度"><a href="#7、信任度" class="headerlink" title="7、信任度"></a>7、信任度</h5><p>适用方法： 用户调查<br>关注者：网站</p>
+<p>如果用户信任推荐系统，那就会增加用户和推荐系统的交互。<br>这里的信任有两方面的含义，一个是推荐的结果好，由此带来的信任感，二是推荐结果的展示符合用户信任的展示。<br><strong>如何提高信任度呢？</strong><br>&emsp;&emsp;- &emsp;增加推荐系统的透明度–提供推荐解释，让用户了解推荐系统的运行机制；<br>&emsp;&emsp;- &emsp;利用用户的社交网络信息–利用好友的信息做推荐，并用好友作出推荐解释。比如微博：您的好友XXX点赞了这条微博。</p>
+<h5 id="8、实时性"><a href="#8、实时性" class="headerlink" title="8、实时性"></a>8、实时性</h5><p>适用方法： 用户调查<br>关注者：网站<br>某些产品需要具备实时性的要求，比如微博、资讯类的。</p>
+<p>实时性包含两个方面：<br>&emsp;&emsp;- &emsp;实时更新推荐列表来满足用户新的行为变化；<br>&emsp;&emsp;- &emsp;推荐系统可以将新加入的物品推荐出去。</p>
+<h5 id="9、健壮性【鲁棒性】"><a href="#9、健壮性【鲁棒性】" class="headerlink" title="9、健壮性【鲁棒性】"></a>9、健壮性【鲁棒性】</h5><p>适用方法： 用户调查、在线实验<br>关注者：用户、内容提供商</p>
+<p>任何一个能带来利益的推荐算法都会被攻击。<br>作弊方法（可参照Tutorial on Robustness of Recommender System， ACM RecSys 2011）<br>&emsp;&emsp;- &emsp;行为注入攻击–比如在Amazon，注册多个账号，同时购买A+自己的商品。<br>&emsp;&emsp;- &emsp;评分系统攻击–注册多个账号，进行虚假评分。</p>
+<p>评测办法：模拟攻击<br>给一份数据集和算法，然后给出一份推荐结果A，运用常用的攻击算法注入噪声数据，同样的算法给出推荐结果B，比较A与B的不同。</p>
+<p><strong>如何提高系统的健壮性：</strong><br>&emsp;&emsp;- &emsp;采用较高健壮性的算法；<br>&emsp;&emsp;- &emsp;尽量使用代价较高的用户行为，比如购买行为&gt;浏览行为<br>&emsp;&emsp;- &emsp;使用前进行攻击检测，对数据进行清理</p>
+<h5 id="10、商业目标"><a href="#10、商业目标" class="headerlink" title="10、商业目标"></a>10、商业目标</h5><p>适用方法： 在线实验<br>关注者：网站、内容提供商</p>
+<p>很多时候，网站评测更加关注商业目标，商业目标与盈利模式息息相关。不同产品有着不同的商业目标，比如电商就是销售额，广告就是点击数等等。<br>因此在设计算法时，也应充分考虑商业相关的指标。</p>
+<br>
+
+<h4 id="第三节：评测维度"><a href="#第三节：评测维度" class="headerlink" title="第三节：评测维度"></a>第三节：评测维度</h4><p>不同的算法在不同的场景/维度下的效果不同，评测维度包含以下三方面：<br>&emsp;&emsp;- &emsp;用户维度：用户人口统计学信息、活跃度、新用户等<br>&emsp;&emsp;- &emsp;物品维度：属性信息、流行度、平均分、新加入的物品等等<br>&emsp;&emsp;- &emsp;时间维度：季节、工作日/周末、白天/晚上</p>
+<p>数据来源于：推荐系统实践–项亮–2012年6月–人民邮电出版社出版</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/推荐系统/" rel="tag"># 推荐系统</a>
+            
+              <a href="/tags/测评/" rel="tag"># 测评</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/05/19/推荐系统简介/" rel="next" title="推荐系统简介">
+                  <i class="fa fa-chevron-left"></i> 推荐系统简介
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/20/Python-pandas工具书/" rel="prev" title="Python-pandas工具书">
+                  Python-pandas工具书 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Cathy</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一节：评测方法简介"><span class="nav-number">1.</span> <span class="nav-text">第一节：评测方法简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、离线实验"><span class="nav-number">1.1.</span> <span class="nav-text">1、离线实验</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、用户调查"><span class="nav-number">1.2.</span> <span class="nav-text">2、用户调查</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、在线实验"><span class="nav-number">1.3.</span> <span class="nav-text">3、在线实验</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二节：评测指标"><span class="nav-number">2.</span> <span class="nav-text">第二节：评测指标</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、用户满意度"><span class="nav-number">2.1.</span> <span class="nav-text">1、用户满意度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、预测准确度"><span class="nav-number">2.2.</span> <span class="nav-text">2、预测准确度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、覆盖率"><span class="nav-number">2.3.</span> <span class="nav-text">3、覆盖率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、多样性"><span class="nav-number">2.4.</span> <span class="nav-text">4、多样性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5、新颖性"><span class="nav-number">2.5.</span> <span class="nav-text">5、新颖性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6、惊喜度"><span class="nav-number">2.6.</span> <span class="nav-text">6、惊喜度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7、信任度"><span class="nav-number">2.7.</span> <span class="nav-text">7、信任度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8、实时性"><span class="nav-number">2.8.</span> <span class="nav-text">8、实时性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9、健壮性【鲁棒性】"><span class="nav-number">2.9.</span> <span class="nav-text">9、健壮性【鲁棒性】</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10、商业目标"><span class="nav-number">2.10.</span> <span class="nav-text">10、商业目标</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三节：评测维度"><span class="nav-number">3.</span> <span class="nav-text">第三节：评测维度</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cathy</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'zNbArREqlBE7GfXiLITfngNg-gzGzoHsz',
+    appKey: 'DRiy64TngM5oJ8WpNobk5Ox9',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
