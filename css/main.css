@@ -154,7 +154,7 @@ body {
   background: #fff;
   color: #555;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: $font-size-max;
+  font-size: 14px;
   line-height: 2;
   position: relative;
 }
@@ -176,22 +176,22 @@ h6 {
   padding: 0;
 }
 h1 {
-  font-size: 20px;
+  font-size: 22px;
 }
 h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h5 {
-  font-size: 12px;
+  font-size: 14px;
 }
 h6 {
-  font-size: 10px;
+  font-size: 12px;
 }
 p {
   margin: 0 0 20px 0;
@@ -313,7 +313,7 @@ kbd {
 }
 .translation {
   color: #999;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: -20px;
 }
 .use-motion .motion-element {
@@ -1069,7 +1069,7 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lobster Two', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: $title-font-size;
   font-weight: normal;
   line-height: 1.5;
@@ -1145,7 +1145,7 @@ pre .javascript .function {
 .menu .menu-item span.exturl {
   border-bottom: 1px solid transparent;
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   line-height: inherit;
   transition-property: border-color;
   transition-delay: 0s;
@@ -1169,22 +1169,22 @@ pre .javascript .function {
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
   .post-body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .post-body span.exturl .fa {
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 4px;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 1;
   margin: -20px auto 15px;
@@ -1423,7 +1423,7 @@ pre .javascript .function {
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 2px;
 }
 .posts-expand .post-meta time {
@@ -1473,7 +1473,7 @@ pre .javascript .function {
   border-bottom: none;
   color: #555;
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
   position: relative;
 }
@@ -1523,7 +1523,7 @@ pre .javascript .function {
 }
 .posts-expand .post-tags a {
   display: inline-block;
-  font-size: 8px;
+  font-size: 10px;
   margin-right: 10px;
 }
 .posts-expand .post-title {
@@ -1560,7 +1560,7 @@ pre .javascript .function {
   visibility: visible;
 }
 .posts-expand .post-title-link .fa {
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 5px;
 }
 .post-widgets {
@@ -1577,7 +1577,7 @@ pre .javascript .function {
 }
 .social-like {
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   justify-content: center;
   text-align: center;
 }
@@ -1680,14 +1680,14 @@ pre .javascript .function {
 .links-of-author span.exturl {
   border-bottom-color: #555;
   display: inline-block;
-  font-size: 8px;
+  font-size: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1a33ff;
+  background: #73c84b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1722,11 +1722,11 @@ pre .javascript .function {
   color: #fff;
 }
 .links-of-blogroll {
-  font-size: 8px;
+  font-size: 10px;
   margin-top: 10px;
 }
 .links-of-blogroll-title {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   margin-top: 0;
 }
@@ -1777,7 +1777,7 @@ pre .javascript .function {
   color: #555;
   cursor: pointer;
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
 }
 .sidebar-nav li.sidebar-nav-overview {
   margin-left: 10px;
@@ -1835,7 +1835,7 @@ pre .javascript .function {
 }
 .post-toc-empty {
   color: #666;
-  font-size: 10px;
+  font-size: 12px;
 }
 .post-toc-wrap {
   overflow: hidden;
@@ -1844,7 +1844,7 @@ pre .javascript .function {
   overflow: auto;
 }
 .post-toc ol {
-  font-size: 10px;
+  font-size: 12px;
   list-style: none;
   margin: 0;
   padding: 0 2px 5px 10px;
@@ -1925,7 +1925,7 @@ pre .javascript .function {
 }
 .footer {
   color: #999;
-  font-size: 10px;
+  font-size: 12px;
 }
 .footer img {
   border: none;
@@ -2010,7 +2010,7 @@ pre .javascript .function {
   width: 10px;
 }
 .page-archive .posts-collapse .archive-page-counter {
-  font-size: 14px;
+  font-size: 16px;
   left: 20px;
   position: relative;
   top: 3px;
@@ -2463,7 +2463,7 @@ hr {
   background: none;
   border: none;
   border-bottom: 2px solid #666;
-  font-size: 10px;
+  font-size: 12px;
   padding: 0;
   transition-property: border;
 }
