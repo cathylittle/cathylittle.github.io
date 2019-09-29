@@ -1387,7 +1387,7 @@ pre .javascript .function {
   visibility: visible;
 }
 .posts-expand .post-body img {
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   box-sizing: border-box;
   margin: 0 auto 20px;
   padding: 3px;
@@ -1688,7 +1688,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #73b0ff;
+  background: #ff4e28;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

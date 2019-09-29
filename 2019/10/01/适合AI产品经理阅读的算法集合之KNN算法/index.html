@@ -54,21 +54,22 @@
   };
 </script>
 
-  <meta name="description" content="什么是推荐系统？推荐系统的任务就是联系用户和信息，一方面帮助用户发现对自己有价值的信息，另一方面让信息能够展现在对它感兴趣的用户面前，从而实现信息消费者和信息生产者的双赢。">
-<meta name="keywords" content="推荐系统">
+  <meta name="description" content="前情提要： 适合AI产品经理阅读的算法集合系列文章，主旨在于，用非技术性的语言，向大家介绍算法相关的模型和思路，让大家看的懂，听得懂。  点击这里查看介绍">
+<meta name="keywords" content="AI产品,算法,KNN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="推荐系统简介">
-<meta property="og:url" content="http://yoursite.com/2019/05/19/推荐系统简介/index.html">
+<meta property="og:title" content="适合AI产品经理阅读的算法集合之KNN算法">
+<meta property="og:url" content="http://yoursite.com/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/index.html">
 <meta property="og:site_name" content="Cathy&#39;s blog">
-<meta property="og:description" content="什么是推荐系统？推荐系统的任务就是联系用户和信息，一方面帮助用户发现对自己有价值的信息，另一方面让信息能够展现在对它感兴趣的用户面前，从而实现信息消费者和信息生产者的双赢。">
+<meta property="og:description" content="前情提要： 适合AI产品经理阅读的算法集合系列文章，主旨在于，用非技术性的语言，向大家介绍算法相关的模型和思路，让大家看的懂，听得懂。  点击这里查看介绍">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="http://yoursite.com/img/推荐系统的分类.jpg">
-<meta property="og:updated_time" content="2019-09-19T06:06:06.000Z">
+<meta property="og:image" content="http://yoursite.com/img/knn_example.png">
+<meta property="og:image" content="http://yoursite.com/img/knn_steps.png">
+<meta property="og:updated_time" content="2019-09-29T06:23:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="推荐系统简介">
-<meta name="twitter:description" content="什么是推荐系统？推荐系统的任务就是联系用户和信息，一方面帮助用户发现对自己有价值的信息，另一方面让信息能够展现在对它感兴趣的用户面前，从而实现信息消费者和信息生产者的双赢。">
-<meta name="twitter:image" content="http://yoursite.com/img/推荐系统的分类.jpg">
-  <link rel="canonical" href="http://yoursite.com/2019/05/19/推荐系统简介/">
+<meta name="twitter:title" content="适合AI产品经理阅读的算法集合之KNN算法">
+<meta name="twitter:description" content="前情提要： 适合AI产品经理阅读的算法集合系列文章，主旨在于，用非技术性的语言，向大家介绍算法相关的模型和思路，让大家看的懂，听得懂。  点击这里查看介绍">
+<meta name="twitter:image" content="http://yoursite.com/img/knn_example.png">
+  <link rel="canonical" href="http://yoursite.com/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/">
 
 
 <script id="page-configurations">
@@ -82,7 +83,7 @@
   };
 </script>
 
-  <title>推荐系统简介 | Cathy's blog</title>
+  <title>适合AI产品经理阅读的算法集合之KNN算法 | Cathy's blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -242,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/19/推荐系统简介/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cathy">
@@ -254,7 +255,7 @@
       <meta itemprop="name" content="Cathy's blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">推荐系统简介
+        <h1 class="post-title" itemprop="name headline">适合AI产品经理阅读的算法集合之KNN算法
 
           
         </h1>
@@ -270,7 +271,7 @@
                 
               
 
-              <time title="Created: 2019-05-19 21:49:03" itemprop="dateCreated datePublished" datetime="2019-05-19T21:49:03+08:00">2019-05-19</time>
+              <time title="Created: 2019-10-01 10:14:34" itemprop="dateCreated datePublished" datetime="2019-10-01T10:14:34+08:00">2019-10-01</time>
             </span>
           
             
@@ -281,7 +282,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-19 14:06:06" itemprop="dateModified" datetime="2019-09-19T14:06:06+08:00">2019-09-19</time>
+                <time title="Modified: 2019-09-29 14:23:01" itemprop="dateModified" datetime="2019-09-29T14:23:01+08:00">2019-09-29</time>
               </span>
             
           
@@ -300,7 +301,7 @@
           
 
           
-            <span id="/2019/05/19/推荐系统简介/" class="post-meta-item leancloud_visitors" data-flag-title="推荐系统简介" title="Views">
+            <span id="/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/" class="post-meta-item leancloud_visitors" data-flag-title="适合AI产品经理阅读的算法集合之KNN算法" title="Views">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -318,7 +319,7 @@
       
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2019/05/19/推荐系统简介/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/推荐系统简介/" itemprop="commentCount"></span></a>
+    <a title="valine" href="/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/10/01/适合AI产品经理阅读的算法集合之KNN算法/" itemprop="commentCount"></span></a>
   </span>
   
   
@@ -328,7 +329,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
               
-              <span>443</span>
+              <span>716</span>
             </span>
           
 
@@ -341,45 +342,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="什么是推荐系统？"><a href="#什么是推荐系统？" class="headerlink" title="什么是推荐系统？"></a>什么是推荐系统？</h4><p>推荐系统的任务就是联系用户和信息，一方面帮助用户发现对自己有价值的信息，另一方面让信息能够展现在对它感兴趣的用户面前，从而实现信息消费者和信息生产者的双赢。</p>
-<a id="more"></a>
+        <h3 id="前情提要："><a href="#前情提要：" class="headerlink" title="前情提要："></a>前情提要：</h3><font color="gray" size="2">
+适合AI产品经理阅读的算法集合系列文章，主旨在于，用非技术性的语言，向大家介绍算法相关的模型和思路，让大家看的懂，听得懂。
 
+<p><a href="http://localhost:4000/2019/09/29/%E9%80%82%E5%90%88AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%98%85%E8%AF%BB%E7%9A%84%E7%AE%97%E6%B3%95%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">点击这里查看介绍</a><br></p></font><a id="more"></a><p></p>
+<br>
+
+<h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>KNN算法，k-NearestNeighbor，基本上就是，某一个样本可以用它最近的K个样本来表示。<br>该算法需要一份标准集，但不需要模型训练，就可以直接计算。</p>
+<p>我们来举个例子，下图中有两个分类，那么？的数据应该是哪一类呢，我们取距离它最近的K个样本，K=3，发现他的分类应该是历史类文章。大家也可以想一下，如果K=4,5,6…会发生什么样的事情</p>
+<img width="400" src="/img/knn_example.png"> 
 
 <br>
 
-<h4 id="为什么会出现推荐系统？"><a href="#为什么会出现推荐系统？" class="headerlink" title="为什么会出现推荐系统？"></a>为什么会出现推荐系统？</h4><p>信息过载 + 个性化需求 + 算法。推荐系统通过发掘用户的行为， 找到用户的个性化需求， 从而将长尾商品准确地推荐给需要它的用户，帮助用户发现那些他们感兴趣但很难发现的商品。</p>
-<p>信息过载的解决方案：</p>
+<h4 id="KNN算法步骤"><a href="#KNN算法步骤" class="headerlink" title="KNN算法步骤"></a>KNN算法步骤</h4><p>上述的例子中，就体现了KNN的整个算法流程，我们这边来总结一下相关步骤</p>
+<img width="600" src="/img/knn_steps.png"> 
+
 <ul>
-<li>分类目录（只展示热门网站，数量较少）</li>
-<li>搜索引擎（需要明确的搜索意图）</li>
-<li>推荐系统（分析用户历史行为给出推荐，不需要输入）</li>
+<li>step1：标准集就是标注集，一份正确的样本及对应的分类；</li>
+<li>step2：特征建立，这是所有的算法模型都必须进行的步骤，此处不细讲，会有专门的文章讲述，简单来说，就是需要把认为重要的因素，把它数字化，比如把文本通过word2vec变成向量；</li>
+<li>step3：计算距离进行预测，距离的计算方式有欧氏距离、余弦距离、汉明距离、曼哈顿距离等；</li>
+<li>step4：确定K值，如上案例，如果K过大/过小，结果就会不一样；</li>
+<li>step5：计算分类标签，一般采用多数表决，可直接计算频次，取最高。</li>
 </ul>
-<br>
-
-<h4 id="推荐系统的分类"><a href="#推荐系统的分类" class="headerlink" title="推荐系统的分类"></a>推荐系统的分类</h4><img width="500" src="/img/推荐系统的分类.jpg">
-
-
-<br>
-
-<h4 id="推荐系统的组成"><a href="#推荐系统的组成" class="headerlink" title="推荐系统的组成"></a>推荐系统的组成</h4><p>推荐系统应用由三部分组成：前台展示页面、后台日志系统、推荐算法</p>
-<p>个性化推荐成功的原因：</p>
-<ol>
-<li>存在信息过载</li>
-<li>大部分用户没有明确需求</li>
-</ol>
-<br>
-
-<h4 id="推荐系统的应用"><a href="#推荐系统的应用" class="headerlink" title="推荐系统的应用"></a>推荐系统的应用</h4><p>个性化推荐的应用：</p>
+<h4 id="KNN算法优化"><a href="#KNN算法优化" class="headerlink" title="KNN算法优化"></a>KNN算法优化</h4><p>其实在上述步骤中，KNN的优化，也随之清楚</p>
 <ul>
-<li>电子商务（amazon、淘宝、天猫)</li>
-<li>电影和视频网站（豆瓣、腾讯、抖音），</li>
-<li>音乐（网易、豆瓣电台），</li>
-<li>社交网络（Facebook），</li>
-<li>阅读（今日头条），</li>
-<li>位置服务LBS，</li>
-<li>邮件（Google），</li>
-<li>广告（Admaster）</li>
+<li>对应step1：尽量数据准确、分布均匀的标准集；</li>
+<li>对应step2：建立优秀的特征数据；</li>
+<li>对应step3：采用合适的距离测算方案；</li>
+<li>对应step4：优化K值，可多做实验，找出最佳值</li>
+<li>对应step5：计算方式，可算频次，也可加权，比如根据距离的远近</li>
 </ul>
+<h4 id="KNN算法局限"><a href="#KNN算法局限" class="headerlink" title="KNN算法局限"></a>KNN算法局限</h4><p>数据/特征大的话，计算量过大，时间较长，KNN适用于样本容量比较大的类域的自动分类。</p>
 
     </div>
 
@@ -395,7 +388,11 @@
           
           <div class="post-tags">
             
-              <a href="/tags/推荐系统/" rel="tag"># 推荐系统</a>
+              <a href="/tags/AI产品/" rel="tag"># AI产品</a>
+            
+              <a href="/tags/算法/" rel="tag"># 算法</a>
+            
+              <a href="/tags/KNN/" rel="tag"># KNN</a>
             
           </div>
         
@@ -405,8 +402,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/04/20/用强化学习的思维设计产品/" rel="next" title="用强化学习的思维设计产品">
-                  <i class="fa fa-chevron-left"></i> 用强化学习的思维设计产品
+                <a href="/2019/09/29/适合AI产品经理阅读的算法集合概述/" rel="next" title="适合AI产品经理阅读的算法集合概述">
+                  <i class="fa fa-chevron-left"></i> 适合AI产品经理阅读的算法集合概述
                 </a>
               
             </div>
@@ -414,10 +411,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/06/19/推荐系统测评/" rel="prev" title="推荐系统测评">
-                  推荐系统测评 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -560,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是推荐系统？"><span class="nav-number">1.</span> <span class="nav-text">什么是推荐系统？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么会出现推荐系统？"><span class="nav-number">2.</span> <span class="nav-text">为什么会出现推荐系统？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐系统的分类"><span class="nav-number">3.</span> <span class="nav-text">推荐系统的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐系统的组成"><span class="nav-number">4.</span> <span class="nav-text">推荐系统的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐系统的应用"><span class="nav-number">5.</span> <span class="nav-text">推荐系统的应用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前情提要："><span class="nav-number">1.</span> <span class="nav-text">前情提要：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文："><span class="nav-number">2.</span> <span class="nav-text">正文：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#KNN算法步骤"><span class="nav-number">2.1.</span> <span class="nav-text">KNN算法步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KNN算法优化"><span class="nav-number">2.2.</span> <span class="nav-text">KNN算法优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KNN算法局限"><span class="nav-number">2.3.</span> <span class="nav-text">KNN算法局限</span></a></li></ol></li></ol></div>
             
 
           </div>
