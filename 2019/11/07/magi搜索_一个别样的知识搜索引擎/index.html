@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.json',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="正文：今日，给大家推荐款知识图谱的搜索引擎，magi搜索（点击访问magi搜索）， 接下来我们会通过以下五个部分进行讲述：">
+<meta name="keywords" content="AI产品,有趣有实力的产品系列,知识图谱,搜索引擎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="magi搜索__一个别样的知识搜索引擎">
+<meta property="og:url" content="http://yoursite.com/2019/11/07/magi搜索_一个别样的知识搜索引擎/index.html">
+<meta property="og:site_name" content="Cathy&#39;s blog">
+<meta property="og:description" content="正文：今日，给大家推荐款知识图谱的搜索引擎，magi搜索（点击访问magi搜索）， 接下来我们会通过以下五个部分进行讲述：">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="http://yoursite.com/img/magi_search.png">
+<meta property="og:image" content="http://yoursite.com/img/magi_result.png">
+<meta property="og:image" content="http://yoursite.com/img/magi_result2.png">
+<meta property="og:image" content="http://yoursite.com/img/magi_ceo.png">
+<meta property="og:image" content="http://yoursite.com/img/magi_result3.png">
+<meta property="og:image" content="http://yoursite.com/img/magi_result4.png">
+<meta property="og:updated_time" content="2019-11-08T07:53:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="magi搜索__一个别样的知识搜索引擎">
+<meta name="twitter:description" content="正文：今日，给大家推荐款知识图谱的搜索引擎，magi搜索（点击访问magi搜索）， 接下来我们会通过以下五个部分进行讲述：">
+<meta name="twitter:image" content="http://yoursite.com/img/magi_search.png">
+  <link rel="canonical" href="http://yoursite.com/2019/11/07/magi搜索_一个别样的知识搜索引擎/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>magi搜索__一个别样的知识搜索引擎 | Cathy's blog</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cathy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-favorite">
+      
+    
+
+    <a href="/favorite/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>favorite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/magi搜索_一个别样的知识搜索引擎/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cathy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cathy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">magi搜索__一个别样的知识搜索引擎
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-07 14:35:20" itemprop="dateCreated datePublished" datetime="2019-11-07T14:35:20+08:00">2019-11-07</time>
+            </span>
+          
+
+          
+            <span id="/2019/11/07/magi搜索_一个别样的知识搜索引擎/" class="post-meta-item leancloud_visitors" data-flag-title="magi搜索__一个别样的知识搜索引擎" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/11/07/magi搜索_一个别样的知识搜索引擎/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/11/07/magi搜索_一个别样的知识搜索引擎/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>2.9k</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h2><p>今日，给大家推荐款知识图谱的搜索引擎，magi搜索（<a href="https://magi.com/" target="_blank" rel="noopener">点击访问magi搜索</a>）， 接下来我们会通过以下五个部分进行讲述：</p><a id="more"></a>
+<ol>
+<li>为什么会向大家推荐这款产品？</li>
+<li>magi搜索简介</li>
+<li>magi核心技术</li>
+<li>创始人NB！</li>
+<li>从个人角度，提出一些建议和意见。</li>
+<li>magi对未来的产品，究竟意味着什么？</li>
+</ol>
+<h3 id="1-为什么会想大家推荐这款产品"><a href="#1-为什么会想大家推荐这款产品" class="headerlink" title="1. 为什么会想大家推荐这款产品"></a>1. 为什么会想大家推荐这款产品</h3><p>这个产品是通过微信公众号看到的，看完全文后，就迫不及待的体验产品，并查看了作者相关的博客、知乎等，哇哦，体验下来很牛的样子。<br>这款产品，除了讨论一下技术层面的厉害之处，创始人令人敬佩之处外，还想再深入的和大家探讨一下关于AI对未来产品的影响。<br>我也在AI这个行业做产品经理约5年，但真正的，把AI做到如此纯粹的公司也是少数，它的精彩之处，除了产品以外，还启迪了我们对于未来AI产品形态，AI场景的一些思考（小编的心，鸡冻鸡冻）。话不多说，让我们进入正题。</p>
+<h3 id="2-magi搜索简介"><a href="#2-magi搜索简介" class="headerlink" title="2. magi搜索简介"></a>2. magi搜索简介</h3><h4 id="2-1-magi搜索首页"><a href="#2-1-magi搜索首页" class="headerlink" title="2.1. magi搜索首页"></a>2.1. magi搜索首页</h4><p>下图就是首页的截图（小编很想搞一个GIF，可惜还没有学会相关技术，哭哭o(╥﹏╥)o）</p>
+<h5 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h5><p>经过试验，我们可以输入以下几种内容</p>
+<ul>
+<li>关键词，”知识图谱”</li>
+<li>问题，”985的学校有哪些”</li>
+<li>表达式，”3+5”</li>
+</ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><p>我们还可以看到目前magi正在学习的文章标题、链接，以及学习到的内容。将AI过程可视化，让用户真正的信服你的产品，相信技术，真的是AI产品必修的一门课呀</p>
+<img width="630" src="/img/magi_search.png"> 
+
+<h4 id="2-2-magi搜索结果页"><a href="#2-2-magi搜索结果页" class="headerlink" title="2.2. magi搜索结果页"></a>2.2. magi搜索结果页</h4><p>从页面上看，结果分为4个模块：</p>
+<ul>
+<li>搜索框</li>
+<li>结构化数据</li>
+<li>主要学习来源</li>
+<li>相关报道（普通搜索引擎类似）</li>
+</ul>
+<p>搜索框以及相关报道，我们其实已经很熟悉了，在其他产品中较为常见，我们主要就结构化数据以及主要学习来源来做一些。<br>我们可以从下图看到相关的结构化的数据的含义。</p>
+<img width="1400" src="/img/magi_result.png"> 
+
+<p>这里的所有带颜色框的标签，都是可点的，点进去后会出来，该数据的来源，以及置信度数值，当然此时hover住右端的主要学习来源还是有连线的。<br><img width="630" src="/img/magi_result2.png"> </p>
+<p>到这里，magi的搜索产品就介绍完了，很简单，就两个页面。其实很明显，这完全就是一个技术驱动的产品，那么我们接下来介绍一下他的一些技术。</p>
+<h3 id="3-magi核心"><a href="#3-magi核心" class="headerlink" title="3. magi核心"></a>3. magi核心</h3><p>想看更详细的技术解析，大家可以访问<a href="https://www.peak-labs.com/docs/zh/magi/hardcore-faq" target="_blank" rel="noopener">面向硬核用户的问题与解答</a>，<a href="https://www.zhihu.com/question/354059866/answer/881655371" target="_blank" rel="noopener">知乎CEO官方回答</a>，我们呢，就简单的讲讲。<br>搜索的过程分为以下几步：</p>
+<ul>
+<li>意图识别</li>
+<li>检索</li>
+<li>排序</li>
+</ul>
+<p>但我们这一次不讲这三步相关的内容，是不是很惊喜很意外，如果大家感兴趣的话，可以看小编的另一个篇文章，<a href>搜索是怎么样的一回事？</a>。我们本次主要讲的是信息抽取的技术。<br>大家可以看到，搜索页面的结构化数据，和知识图谱是不是很像呀，数据结构都是三元组的形式。目前通常意义上的知识图谱都是全部人工，或者半机器半人工（人工确认）的方式来获取数据的。但是，magi太棒了，它可以通过文章，自动学习实体，以及实体与实体的关系。大家想详细的了解技术，就看一看上面的链接。能做到自动发现，且准确率较高，这本身就是一件很难的事情。<br>大家可以想象，如果有一天机器把这个世界各个角度，所有发生的事情都理解了一遍，那么它是不是就是某种程度的”上帝”了呢？如果知识图谱可以自动发现并积累各个领域的知识，那么无论是对于Siri、小爱同学，甚至对现有的模型及应用场景都是一个大幅的提升，远超人类也并非不可能。</p>
+<p>正如创始人所说，这样其实也会面临以下几个问题：</p>
+<ul>
+<li>消歧义的问题，如何把握这个度量，可以较为显著的区分不同含义的同一词组，比如”tesla”是一个人还是一个汽车品牌</li>
+<li>工程上，在速度和成本方面还是有提升空间的</li>
+</ul>
+<p>那有些朋友会问了：<br>万一magi去爬了某些质量不高的网站，或者抽取的信息错误怎么办？</p>
+<ul>
+<li>magi会评估每个来源的网站。为什么不用白名单来解决，因为白名单虽然可以保证质量，却也失去了很多内容。</li>
+<li>由于magi每分钟都在学习新的知识，因此，在大量数据的情况下，被抽取错误的信息会慢慢变得正确。</li>
+</ul>
+<h3 id="4-创始人NB"><a href="#4-创始人NB" class="headerlink" title="4. 创始人NB"></a>4. 创始人NB</h3><p>季逸超是北大毕业，Peak Labs创始人，猛犸浏览器，Magi智能搜索引擎的开发者。在19岁时便登上了《福布斯》杂志的封面。（大神就是从小不凡）<br>Peak Labs，已经获得红杉中国和徐小平创办的真格基金的天使投资。季逸超在自己的微博上说过，这个实验室“要做最狂最新鲜的事”。 　</p>
+<p>创始人的知乎介绍：<br><img width="630" src="/img/magi_ceo.png"> </p>
+<h3 id="5-从个人角度，提出一些建议和意见"><a href="#5-从个人角度，提出一些建议和意见" class="headerlink" title="5. 从个人角度，提出一些建议和意见"></a>5. 从个人角度，提出一些建议和意见</h3><p>小编主要是做AI产品的，大部分会从页面上，小部分从算法结果上，给一些小小的建议，。<br>整体上来看，这是一个很geek的产品，产品设计页面展示上也是如此。</p>
+<h4 id="5-1-页面上"><a href="#5-1-页面上" class="headerlink" title="5.1. 页面上"></a>5.1. 页面上</h4><ul>
+<li>目前置信度是通过颜色来表示的，如果没有人阅读过相关文章的话，很难第一眼就发现颜色的含义。建议：通过引导页，或者直接不用颜色，用文字的方式进行展示区分；</li>
+<li>任何标签都是可点击，点击后才知道，可做引导页提示；</li>
+<li>属性后的…是可以同时搜索的，输入框的条件以及目前点击的实体的组合，这个一般用户尝试过后才能知道，产品上可做的稍微明显一些；</li>
+<li>标签右上方的小绿点，嗯，小编不知道，这个是啥意思，还没理解；</li>
+<li>在描述和属性中，我们可以看到很多相关的内容，是否在展示的时候，可以把相关的展示到一个模块，比如上市公司，那就把公司财报相关的数据放一起，目前看起来是有些乱的。根据一些维度进行区分后，不仅仅能解决乱的问题，还可以解决歧义的问题，比如”tesla”享年会和公司明显分区开来。</li>
+</ul>
+<h4 id="5-2-算法结果上"><a href="#5-2-算法结果上" class="headerlink" title="5.2. 算法结果上"></a>5.2. 算法结果上</h4><ul>
+<li>同义词的结果仅展示一次即可。比如特斯拉的描述，”上海有史以来最大的外资制造业项目”和”上海有史以来最大的外商独资制造业项目”；</li>
+<li>同义词的实体，比如搜索”特斯拉”,它是一个品牌，一家公司，但对应的实体就是一个，因此只需要出这个的相关信息即可，目前是有”特斯拉”以及”特斯拉公司”，且”特斯拉公司”的数据几乎没什么内容；另外”tesla”与”特斯拉”出来结构化的内容也是不同的；</li>
+<li>某些无意义的词语。比如特斯拉的标签”项目”。</li>
+</ul>
+<img width="630" src="/img/magi_result3.png"> 
+<img width="630" src="/img/magi_result4.png"> 
+
+
+
+<h4 id="5-3-展望"><a href="#5-3-展望" class="headerlink" title="5.3. 展望"></a>5.3. 展望</h4><ul>
+<li>数据，关系的可视化，更炫酷的页面</li>
+<li>更干净，更有层级的数据</li>
+</ul>
+<h3 id="6-magi对未来的产品，究竟意味着什么？"><a href="#6-magi对未来的产品，究竟意味着什么？" class="headerlink" title="6. magi对未来的产品，究竟意味着什么？"></a>6. magi对未来的产品，究竟意味着什么？</h3><p>让我们从小入手，就从magi的核心，信息抽取来开始讲起。<br>信息抽取是NLP重要的一个组成部分，是NLP的基础工程。NLP的基础就是文本，我们从最小组合说起，句子。我们来思考下，句子的构成。将实体、关系通过一些助词、语法结构等，组合在一起，就是一个句子。将诸多句子组合在一起，就是段落，于是可称为文章。由此可看出，一句话的核心，就是实体和关系。我们一般通过NER、依存分析等等相关技术，来试图理解每一句话在讲什么意思，究竟是什么意思，有哪些实体，有哪些词语，有哪些关系，这些技术一般都需要人的帮助，且无法适用所有情景。</p>
+<p>信息被结构化后，又有什么样的好处呢？<br>小编目前的领域是在做候选人与职位的匹配，我深刻的从实践中了解到，匹配精准的基础就是对两方的精准理解，当然，如果你的数据量大到不可思议，且分布较为均匀，嗯，当我没说。</p>
+<ul>
+<li>为决策提供准确的基础数据，提高匹配的准确性，适用于推荐、匹配；</li>
+<li>提高检索的有效性，直击答案，而不用人再次辨别，适用于搜索、对话系统；</li>
+<li>可视化AI决策过程，适用于建立AI与人的信任度。</li>
+</ul>
+<p>最后，magi技术的突破是否能像Deepmind的强化学习一样，引起AI领域的一阵海啸，我们拭目以待。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/AI产品/" rel="tag"># AI产品</a>
+            
+              <a href="/tags/有趣有实力的产品系列/" rel="tag"># 有趣有实力的产品系列</a>
+            
+              <a href="/tags/知识图谱/" rel="tag"># 知识图谱</a>
+            
+              <a href="/tags/搜索引擎/" rel="tag"># 搜索引擎</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/10/适合AI产品经理阅读的算法集合之朴素贝叶斯/" rel="next" title="适合AI产品经理阅读的算法集合之朴素贝叶斯">
+                  <i class="fa fa-chevron-left"></i> 适合AI产品经理阅读的算法集合之朴素贝叶斯
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Cathy</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文："><span class="nav-number">1.</span> <span class="nav-text">正文：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-为什么会想大家推荐这款产品"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么会想大家推荐这款产品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-magi搜索简介"><span class="nav-number">1.2.</span> <span class="nav-text">2. magi搜索简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-magi搜索首页"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1. magi搜索首页</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#输入"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-magi搜索结果页"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2. magi搜索结果页</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-magi核心"><span class="nav-number">1.3.</span> <span class="nav-text">3. magi核心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创始人NB"><span class="nav-number">1.4.</span> <span class="nav-text">4. 创始人NB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-从个人角度，提出一些建议和意见"><span class="nav-number">1.5.</span> <span class="nav-text">5. 从个人角度，提出一些建议和意见</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-页面上"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1. 页面上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-算法结果上"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2. 算法结果上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-展望"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3. 展望</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-magi对未来的产品，究竟意味着什么？"><span class="nav-number">1.6.</span> <span class="nav-text">6. magi对未来的产品，究竟意味着什么？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cathy</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'zNbArREqlBE7GfXiLITfngNg-gzGzoHsz',
+    appKey: 'DRiy64TngM5oJ8WpNobk5Ox9',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
